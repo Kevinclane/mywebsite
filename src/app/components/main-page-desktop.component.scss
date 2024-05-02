@@ -8,7 +8,7 @@
         width: 20dvw;
         height: 100dvh;
         flex-direction: column;
-        background-color: $bg-dark-blue;
+        background-color: $primary-dark-blue;
         text-align: center;
         display: flex;
         justify-content: start;
@@ -41,8 +41,8 @@
     }
 
     .divider {
-        background: $bg-dark;
-        background: linear-gradient(90deg, $bg-dark-blue 0%, $bg-dark 100%);
+        background: $primary-dark;
+        background: linear-gradient(90deg, $primary-dark-blue 0%, $primary-dark 100%);
         width: 7dvw;
         height: 100dvh;
         position: sticky;
@@ -69,5 +69,11 @@
         }
     }
 
+    .experience {
+        app-experience {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
 
 }
