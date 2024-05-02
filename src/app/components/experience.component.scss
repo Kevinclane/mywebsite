@@ -5,9 +5,9 @@
     justify-self: flex-end;
     padding: 1rem;
     border-radius: 1rem;
-    border: 2px solid red;
     margin: 1rem;
     width: 60dvw;
+    cursor: pointer;
 
     .dates {
         font-size: 0.8rem;
@@ -21,7 +21,7 @@
         .title {
             font-size: 1.5rem;
             font-weight: bold;
-            color: white;
+            color: $white;
         }
 
         .secondary-title {
@@ -29,15 +29,17 @@
             font-weight: bold;
         }
 
-        // .accomplishments {
-
-        // }
+        .accomplishments {
+            color: $lighter-gray;
+        }
 
         .skills {
+            padding-inline-start: 0;
+
             .skill {
                 display: inline-block;
                 padding: 0.5rem;
-                margin: 0.5rem;
+                margin: 0.5rem 0.5rem 0.5rem 0;
                 border-radius: 2rem;
                 background-color: $green;
                 color: $primary-dark;
@@ -48,4 +50,12 @@
 
     }
 
+}
+
+.container:hover {
+    background-color: $secondary-dark;
+
+    .details .title {
+        color: $light-green;
+    }
 }

@@ -56,7 +56,16 @@ export class DataConstants {
                 'Scss'
             ],
             url: 'https://www.allata.com/',
-            accomplishments: ''
+            accomplishments: `
+                Architected and developed system to manage and track the progress batched 
+                data through multiple Azure Services. The system also provided a way to 
+                collect and store errors and logs for the batched data. Extracted and 
+                recatored the download processes into one generic and highly extensible
+                microservice. Inegreated Web Sockets for real-time updates on the front-end.
+                Built various SPA pages from Figma designs. All of the code included extensive
+                unit testing. Wrote documentation and diagrams for complicated data flows and 
+                system architecture. 
+            `
         },
         {
             companyName: 'In Time Tec',
@@ -77,7 +86,12 @@ export class DataConstants {
                 'Scss'
             ],
             url: 'https://www.intimetec.com/',
-            accomplishments: ''
+            accomplishments: `
+                Built and deployed secure web API for the client's database. Incorporated
+                continous deployment via CI/CD pipelines. Created Splunk dashboards to monitor
+                the health of the application and debug issues in live environments. Updated a 
+                MySQL database, allowing the client to build robust reports and track inventory.
+            `
         },
         {
             companyName: 'Mesh Software | Contract',
@@ -93,7 +107,13 @@ export class DataConstants {
                 'Scss'
             ],
             url: 'https://www.flatoutmotorcycles.com/',
-            accomplishments: ''
+            accomplishments: `
+                Build and deployed a secure web API for the client's database, separating the
+                administrators from the customers. Updated MySQL tables and columns to provide
+                additional data to users. Built modals and forms for the front-end to allow
+                company employees to update and add data to the database. Increased the speed, 
+                security, and overall performance of the website by updating legacy code.
+            `
         },
         {
             companyName: 'Fourcaster LLC | Contract',
@@ -106,7 +126,11 @@ export class DataConstants {
                 'Vue.js'
             ],
             url: 'https://4casters.io/',
-            accomplishments: ''
+            accomplishments: `
+                Refactored a Node.js server to follow the MVC design pattern, allowing for 
+                future development to be more organized and efficient. Built pages and components
+                to allow administrators to accurately track changes in the data.
+            `
         }
     ];
 }

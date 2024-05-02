@@ -4,7 +4,7 @@ import { JobExperience } from "../models/job-experience";
 
 @Component({
     template: `
-        <div class="container">
+        <div class="container" (click)="openLink()">
             <div class="dates">
                 {{ jobExperience.startDate }} - {{ jobExperience.endDate }}
             </div>
@@ -18,7 +18,7 @@ import { JobExperience } from "../models/job-experience";
                     </div>
                 </div>
                 <div class="accomplishments">
-
+                    {{ jobExperience.accomplishments }}
                 </div>
                 <ul class="skills">
                     <li class="skill" *ngFor="let skill of jobExperience.skills;">
@@ -44,4 +44,8 @@ export class Experience {
         url: '',
         accomplishments: ''
     };
+
+    openLink() {
+        window.open(this.jobExperience.url, '_blank');
+    }
 }
