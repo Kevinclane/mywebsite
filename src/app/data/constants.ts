@@ -8,9 +8,9 @@ export class DataConstants {
     public ABOUT_ONE = `
         In June of 2020, I enrolled in a local coding bootcamp. The course was challenging
         and thorough, but also very enjoyable. I took what I had learned and began a freelance
-        business, worked on personal projects, and hunted for a full-time position. Since then,
-        I've worked at a couple of consulting firms helping some huge companies with their 
-        software needs.
+        business and worked on personal projects. I have since worked for a couple of consulting
+        firms and have gained experience in a variety of technologies. I am always looking for
+        new and exciting challenges to grow my skills and knowledge.
     `;
 
     public ABOUT_TWO = `

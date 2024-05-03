@@ -3,22 +3,26 @@ import { CommonModule } from "@angular/common";
 import { DataConstants } from "../data/constants";
 import { Experience } from "./experience.component";
 import { BehaviorSubject, Observable, debounceTime, distinctUntilChanged, of, switchMap } from "rxjs";
+import { Links } from "./links.component";
+import { Resume } from "./resume.component";
 
 @Component({
   template: `
     <div class="container">
       <div class="nav-section">
-        <div class="name">Kevin Lane</div>
-        <div class="title">Software Engineer</div>
-        <div class="img-wrapper">
-          <img src="../assets/headshot.jpg" alt="image not found">
+        <div class="name-section">
+          <div class="name">Kevin Lane</div>
+          <div class="title">Software Engineer</div>
         </div>
         <div class="nav-locations">
           <div class="nav-location" (click)="scrollTo(about)" [ngClass]="{'active': activeSection === 'about'}">About</div>
           <div class="nav-location" (click)="scrollTo(experience)" [ngClass]="{'active': activeSection === 'experience'}">Experience</div>
           <div class="nav-location" (click)="scrollTo(skills)" [ngClass]="{'active': activeSection === 'skills'}">Skills</div>
         </div>
+        <app-resume />
+        <app-links />
       </div>
+
       <div class="content-section">
         <div class="about" #about>
           <div>{{ dataConstants.ABOUT_ONE }}</div>
@@ -31,14 +35,14 @@ import { BehaviorSubject, Observable, debounceTime, distinctUntilChanged, of, sw
           </div>
         </div>
         <div class="skills" #skills>
-          <img src="../assets/napoleon-dynamite-skills.gif" alt="image not found">
+          Convert to projects section
         </div>
       </div>
     </div>
   `,
   selector: 'app-main-page-desktop',
   standalone: true,
-  imports: [Experience, CommonModule],
+  imports: [Experience, Links, Resume, CommonModule],
   styleUrl: './main-page-desktop.component.scss'
 })
 export class MainPageDesktop {
@@ -58,7 +62,6 @@ export class MainPageDesktop {
 
   @HostListener('window:resize', ['$event'])
   public onResize() {
-    //add debounceTime and distinctUntilChanged
     this.setupScrollData();
   }
 
@@ -68,13 +71,10 @@ export class MainPageDesktop {
     const bottomOfScreen = window.scrollY + window.innerHeight;
 
     if (bottomOfScreen > this._aboutTop && bottomOfScreen <= this._aboutBottom) {
-      console.log('ABOUT');
       this.activeSection = 'about';
     } else if (bottomOfScreen > this._experienceTop && bottomOfScreen <= this._experienceBottom) {
-      console.log('EXPERIENCE');
       this.activeSection = 'experience';
     } else if (bottomOfScreen > this._skillsTop && bottomOfScreen <= this._skillsBottom) {
-      console.log('SKILLS');
       this.activeSection = 'skills';
     }
 

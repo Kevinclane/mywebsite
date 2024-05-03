@@ -19,23 +19,17 @@
         position: -webkit-sticky;
         top: 0;
 
-        .name {
-            margin-top: 1rem;
-            font-size: 2rem;
-        }
+        .name-section {
+            height: 20dvh;
+            padding-top: 1rem;
 
-        .title {
-            font-size: 1.5rem;
-        }
+            .name {
+                margin-top: 1rem;
+                font-size: 2rem;
+            }
 
-        .img-wrapper {
-            display: flex;
-            justify-content: center;
-            margin: 1rem;
-
-            img {
-                width: 10dvw;
-                border-radius: 50%;
+            .title {
+                font-size: 1.5rem;
             }
         }
 
@@ -44,6 +38,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            min-height: 30dvh;
             margin: 1rem;
 
             .nav-location {
@@ -64,6 +59,21 @@
 
         }
 
+    }
+
+    app-resume {
+        height: 45dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    app-links {
+        height: 5dvh;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: row;
+        padding-bottom: 1rem;
     }
 }
 
@@ -88,7 +98,7 @@
     .experience {
         app-experience {
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
         }
     }
 

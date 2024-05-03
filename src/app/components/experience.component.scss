@@ -6,7 +6,7 @@
     padding: 1rem;
     border-radius: 1rem;
     margin: 1rem;
-    width: 60dvw;
+    width: 40dvw;
     cursor: pointer;
 
     .dates {
@@ -31,6 +31,7 @@
 
         .accomplishments {
             color: $lighter-gray;
+            line-height: 1.5rem;
         }
 
         .skills {
