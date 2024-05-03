@@ -5,10 +5,11 @@
     flex-direction: row;
 
     .nav-section {
-        width: 20dvw;
+        width: 30dvw;
         height: 100dvh;
         flex-direction: column;
-        background-color: $primary-dark-blue;
+        background-color: $dark-cyan;
+        background: linear-gradient(90deg, $dark-cyan 0%, $primary-dark 100%);
         text-align: center;
         display: flex;
         justify-content: start;
@@ -38,21 +39,36 @@
             }
         }
 
-    }
+        .nav-locations {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
 
-    .divider {
-        background: $primary-dark;
-        background: linear-gradient(90deg, $primary-dark-blue 0%, $primary-dark 100%);
-        width: 7dvw;
-        height: 100dvh;
-        position: sticky;
-        position: -webkit-sticky;
-        top: 0;
+            .nav-location {
+                margin: 1rem;
+                padding: 0.25rem;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $light-green;
+                }
+
+                &.active {
+                    font-size: 1.25rem;
+                    color: $light-green;
+                }
+            }
+
+        }
+
     }
 }
 
 .content-section {
-    width: 73dvw;
+    width: 70dvw;
     color: $light-gray;
 
     .about {

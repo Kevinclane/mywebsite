@@ -50,12 +50,12 @@
 
     }
 
-}
+    &:hover {
+        background-color: $secondary-dark;
 
-.container:hover {
-    background-color: $secondary-dark;
-
-    .details .title {
-        color: $light-green;
+        .details .title {
+            color: $light-green;
+            transition: 0.3s;
+        }
     }
 }
