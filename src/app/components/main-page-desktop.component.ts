@@ -1,10 +1,10 @@
-import { Component, ElementRef, Host, HostListener } from "@angular/core";
+import { Component, HostListener } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { DataConstants } from "../data/constants";
 import { Experience } from "./experience.component";
-import { BehaviorSubject, Observable, debounceTime, distinctUntilChanged, of, switchMap } from "rxjs";
 import { Links } from "./links.component";
 import { Resume } from "./resume.component";
+import { Project } from "./project.component";
 
 @Component({
   template: `
@@ -17,7 +17,7 @@ import { Resume } from "./resume.component";
         <div class="nav-locations">
           <div class="nav-location" (click)="scrollTo(about)" [ngClass]="{'active': activeSection === 'about'}">About</div>
           <div class="nav-location" (click)="scrollTo(experience)" [ngClass]="{'active': activeSection === 'experience'}">Experience</div>
-          <div class="nav-location" (click)="scrollTo(skills)" [ngClass]="{'active': activeSection === 'skills'}">Skills</div>
+          <div class="nav-location" (click)="scrollTo(projects)" [ngClass]="{'active': activeSection === 'projects'}">Projects</div>
         </div>
         <app-resume />
         <app-links />
@@ -34,15 +34,18 @@ import { Resume } from "./resume.component";
             <app-experience [jobExperience]="job"/>
           </div>
         </div>
-        <div class="skills" #skills>
-          Convert to projects section
+        <div class="section-padding"></div>
+        <div class="projects" #projects>
+          <div *ngFor="let project of dataConstants.PROJECTS">
+            <app-project [project]="project"></app-project>
+          </div>
         </div>
       </div>
     </div>
   `,
   selector: 'app-main-page-desktop',
   standalone: true,
-  imports: [Experience, Links, Resume, CommonModule],
+  imports: [Experience, Links, Project, Resume, CommonModule],
   styleUrl: './main-page-desktop.component.scss'
 })
 export class MainPageDesktop {
@@ -53,8 +56,8 @@ export class MainPageDesktop {
   private _aboutTop!: number;
   private _experienceBottom!: number;
   private _experienceTop!: number;
-  private _skillsBottom!: number;
-  private _skillsTop!: number;
+  private _projectsBottom!: number;
+  private _projectsTop!: number;
 
   ngAfterViewInit() {
     this.setupScrollData();
@@ -68,14 +71,14 @@ export class MainPageDesktop {
   @HostListener('document:scroll', ['$event'])
   public onViewportScroll() {
 
-    const bottomOfScreen = window.scrollY + window.innerHeight;
+    const screenFocusLine = window.scrollY + (window.innerHeight / 2);
 
-    if (bottomOfScreen > this._aboutTop && bottomOfScreen <= this._aboutBottom) {
+    if (screenFocusLine > this._aboutTop && screenFocusLine <= this._aboutBottom) {
       this.activeSection = 'about';
-    } else if (bottomOfScreen > this._experienceTop && bottomOfScreen <= this._experienceBottom) {
+    } else if (screenFocusLine > this._experienceTop && screenFocusLine <= this._experienceBottom) {
       this.activeSection = 'experience';
-    } else if (bottomOfScreen > this._skillsTop && bottomOfScreen <= this._skillsBottom) {
-      this.activeSection = 'skills';
+    } else if (screenFocusLine > this._projectsTop && screenFocusLine <= this._projectsBottom) {
+      this.activeSection = 'projects';
     }
 
   }
@@ -83,9 +86,9 @@ export class MainPageDesktop {
   private setupScrollData() {
     const aboutDomRect = this.getDomRect('.about');
     const experienceDomRect = this.getDomRect('.experience');
-    const skillsDomRect = this.getDomRect('.skills');
+    const projectsDomRect = this.getDomRect('.projects');
 
-    if (!aboutDomRect || !experienceDomRect || !skillsDomRect) {
+    if (!aboutDomRect || !experienceDomRect || !projectsDomRect) {
       return;
     }
 
@@ -93,8 +96,8 @@ export class MainPageDesktop {
     this._aboutTop = aboutDomRect.top;
     this._experienceBottom = experienceDomRect.height + this._aboutBottom;
     this._experienceTop = experienceDomRect.top;
-    this._skillsBottom = skillsDomRect.height + this._experienceBottom;
-    this._skillsTop = skillsDomRect.top;
+    this._projectsBottom = projectsDomRect.height + this._experienceBottom;
+    this._projectsTop = projectsDomRect.top;
   }
 
   private getDomRect(className: string): DOMRect | undefined {

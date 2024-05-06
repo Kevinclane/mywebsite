@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
+import { DataConstants } from "../data/constants";
 
 @Component({
     template: `
@@ -15,16 +16,5 @@ import { Component } from "@angular/core";
     styleUrl: './links.component.scss'
 })
 export class Links {
-    links = [
-        {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/kevinchristopherlane/',
-            icon: '../assets/linkedin.png'
-        },
-        {
-            name: 'GitHub',
-            url: 'https://github.com/Kevinclane',
-            icon: '../assets/github.png'
-        }
-    ];
+    links = new DataConstants().LINKS;
 }

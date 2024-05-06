@@ -1,4 +1,5 @@
 import { JobExperience } from "../models/job-experience";
+import { ProjectDetails } from "../models/project";
 
 export class DataConstants {
     public DataConstants() {
@@ -22,8 +23,9 @@ export class DataConstants {
     `;
 
     public ABOUT_THREE = `
-        Outside of software, I enjoy going for a run/hike, playing video games, snowboarding,
-        longboarding, repairing cars, and making candy for my family during the holidays.
+        Outside of web development, I enjoy going for a run/hike, playing video games, snowboarding,
+        longboarding, repairing cars, and making candy for my family during the holidays. I also 
+        dabble in game development.
     `;
 
 
@@ -131,6 +133,57 @@ export class DataConstants {
                 future development to be more organized and efficient. Built pages and components
                 to allow administrators to accurately track changes in the data.
             `
+        }
+    ];
+
+    public LINKS = [
+        {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/kevinchristopherlane/',
+            icon: '../assets/linkedin.png'
+        },
+        {
+            name: 'GitHub',
+            url: 'https://github.com/Kevinclane',
+            icon: '../assets/github.png'
+        }
+    ];
+
+    public PROJECTS: ProjectDetails[] = [
+        {
+            title: 'TimeTrackers',
+            description: `
+                Web application that allows users to track their time spent on various tasks.
+                Users can also generate and download invoices. I actively used this while doing
+                freelance work.
+            `,
+            image: '../assets/timetrackers.png',
+            liveLink: 'https://www.timetrackers.net/#/',
+            githubLink: 'https://github.com/Kevinclane/timeclock',
+            technologies: [
+                'Vue.js',
+                'Node.js',
+                'MondoDB',
+                'Docx.js',
+                'Moment.js',
+                'Bootstrap',
+                'PayPal API'
+            ]
+        }, {
+            title: 'Texas Hold em',
+            description: `
+                Web application that allows users to play Texas Hold em' against other users.
+                The game was built for a one week long hackathon. 
+            `,
+            image: '../assets/texasholdem.png',
+            githubLink: 'https://github.com/Kevinclane/HackathonPoker',
+            technologies: [
+                'Vue.js',
+                'Node.js',
+                'MongoDB',
+                'Socket.io',
+                'Bootstrap'
+            ]
         }
     ];
 }

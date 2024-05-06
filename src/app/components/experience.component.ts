@@ -34,16 +34,7 @@ import { JobExperience } from "../models/job-experience";
     styleUrl: './experience.component.scss'
 })
 export class Experience {
-    @Input() jobExperience: JobExperience = {
-        companyName: '',
-        position: '',
-        previousPositions: [],
-        startDate: '',
-        endDate: '',
-        skills: [],
-        url: '',
-        accomplishments: ''
-    };
+    @Input() jobExperience!: JobExperience;
 
     openLink() {
         window.open(this.jobExperience.url, '_blank');

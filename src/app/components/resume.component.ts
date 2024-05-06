@@ -1,10 +1,12 @@
 import { Component } from "@angular/core";
+import * as FileSaver from 'file-saver';
+
+
 
 @Component({
     template: `
-        <div class="container">
+        <div class="container" (click)="download()">
             Resume
-            <img src="../assets/download.png" alt="image not found">
         </div>
     `,
     selector: 'app-resume',
@@ -12,5 +14,7 @@ import { Component } from "@angular/core";
     styleUrl: './resume.component.scss'
 })
 export class Resume {
-
+    download() {
+        FileSaver.saveAs('../assets/KevinLane.docx', 'KevinLane.docx');
+    }
 }
