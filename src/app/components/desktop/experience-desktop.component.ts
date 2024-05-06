@@ -1,6 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { JobExperience } from "../models/job-experience";
+import { JobExperience } from "../../models/job-experience";
 
 @Component({
     template: `
@@ -28,12 +28,12 @@ import { JobExperience } from "../models/job-experience";
             </div> 
         </div>
     `,
-    selector: 'app-experience',
+    selector: 'app-experience-desktop',
     standalone: true,
     imports: [CommonModule],
-    styleUrl: './experience.component.scss'
+    styleUrl: './experience-desktop.component.scss'
 })
-export class Experience {
+export class ExperienceDesktop {
     @Input() jobExperience!: JobExperience;
 
     openLink() {

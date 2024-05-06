@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { ProjectDetails } from "../models/project";
+import { ProjectDetails } from "../../models/project";
 import { CommonModule } from "@angular/common";
 
 @Component({
@@ -23,12 +23,12 @@ import { CommonModule } from "@angular/common";
             </div>
         </div>
     `,
-    selector: 'app-project',
+    selector: 'app-project-desktop',
     standalone: true,
     imports: [CommonModule],
-    styleUrl: './project.component.scss'
+    styleUrl: './project-desktop.component.scss'
 })
-export class Project {
+export class ProjectDesktop {
     @Input() project!: ProjectDetails;
 
     openLink() {

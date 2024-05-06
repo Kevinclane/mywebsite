@@ -1,0 +1,75 @@
+@import '../../../styles.scss';
+
+.container {
+    .nav-section {
+        width: 100%;
+        height: 7dvh;
+        background-color: $dark-cyan;
+        background: linear-gradient(180deg, $dark-cyan 0%, $primary-dark 100%);
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+
+        .nav-locations {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+
+            .nav-location {
+                &.active {
+                    font-size: 1.25rem;
+                    color: $light-green;
+                }
+            }
+        }
+
+    }
+
+    .name-section {
+        color: $near-white;
+        text-align: center;
+        margin: 1rem 0;
+
+        .name {
+            font-size: 2rem;
+        }
+
+        .title {
+            font-size: 1.5rem;
+        }
+    }
+
+    .content-section {
+        width: 90dvw;
+        margin-left: 5dvw;
+        color: $light-gray;
+
+        .about {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            div {
+                margin: 1rem;
+                line-height: 2rem;
+            }
+        }
+
+    }
+
+    .projects {
+        margin-top: 5dvh;
+    }
+
+}
+
+.footer {
+    background-color: $dark-cyan;
+    background: linear-gradient(0deg, $dark-cyan 0%, $primary-dark 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 6dvh;
+}

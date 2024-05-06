@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import '../../../styles.scss';
 
 .container {
     display: flex;
@@ -7,13 +7,13 @@
     .nav-section {
         width: 30dvw;
         height: 100dvh;
+        display: flex;
+        justify-content: start;
+        align-items: center;
         flex-direction: column;
         background-color: $dark-cyan;
         background: linear-gradient(90deg, $dark-cyan 0%, $primary-dark 100%);
         text-align: center;
-        display: flex;
-        justify-content: start;
-        align-items: center;
         color: $near-white;
         position: sticky;
         position: -webkit-sticky;
@@ -102,20 +102,15 @@
         }
     }
 
-    .experience app-experience {
+    .experience app-experience-desktop {
         display: flex;
         justify-content: center;
-    }
-
-    .section-padding {
-        height: 3dhv;
-        background-color: blue;
     }
 
     .projects {
         margin-top: 10dvh;
 
-        app-project {
+        app-project-desktop {
             display: flex;
             justify-content: center;
         }
