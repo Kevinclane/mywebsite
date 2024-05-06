@@ -1,56 +1,11 @@
 @import '../../styles.scss';
+@import '../../dektop.styles.scss';
 
-.container {
-    display: flex;
-    justify-self: flex-end;
-    padding: 1rem;
-    border-radius: 1rem;
-    margin: 1rem;
-    width: 40dvw;
+.card-container .img-wrapper {
+    width: 25%;
+    margin-top: 2rem;
 
-    .img-wrapper {
-        width: 25%;
-        margin-top: 2rem;
-
-        img {
-            max-width: 90%;
-        }
+    img {
+        max-width: 90%;
     }
-
-    .details {
-        width: 75%;
-
-        .title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: $white;
-        }
-
-        .description {
-            color: $lighter-gray;
-            line-height: 1.5rem;
-        }
-
-        .technologies {
-            padding-inline-start: 0;
-
-            .technology {
-                display: inline-block;
-                padding: 0.5rem;
-                margin: 0.5rem 0.5rem 0.5rem 0;
-                border-radius: 2rem;
-                background-color: $green;
-                color: $primary-dark;
-                font-size: .75rem;
-                color: $light-green;
-            }
-        }
-
-        .links a img {
-            width: 20px;
-            padding: .25rem;
-        }
-
-    }
-
 }

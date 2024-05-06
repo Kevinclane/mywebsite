@@ -1,8 +1,6 @@
 import { Component } from "@angular/core";
 import * as FileSaver from 'file-saver';
 
-
-
 @Component({
     template: `
         <div class="container" (click)="download()">

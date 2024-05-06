@@ -4,7 +4,7 @@ import { CommonModule } from "@angular/common";
 
 @Component({
     template: `
-        <div class="container">
+        <div class="card-container" (click)="openLink()">
             <div class="img-wrapper">
                 <img [src]="project.image" alt="image not found">
             </div>
@@ -20,11 +20,6 @@ import { CommonModule } from "@angular/common";
                         {{ technology }}
                     </li>
                 </ul>
-                <div class="links">
-                    <a href="{{ project.githubLink }}" target="_blank">
-                        <img src="../assets/github-white.png" alt="image not found">
-                    </a>
-                </div>
             </div>
         </div>
     `,
@@ -35,4 +30,8 @@ import { CommonModule } from "@angular/common";
 })
 export class Project {
     @Input() project!: ProjectDetails;
+
+    openLink() {
+        window.open(this.project.githubLink, '_blank');
+    }
 }

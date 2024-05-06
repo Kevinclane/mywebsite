@@ -4,7 +4,7 @@ import { JobExperience } from "../models/job-experience";
 
 @Component({
     template: `
-        <div class="container" (click)="openLink()">
+        <div class="card-container" (click)="openLink()">
             <div class="dates">
                 {{ jobExperience.startDate }} - {{ jobExperience.endDate }}
             </div>
@@ -17,11 +17,11 @@ import { JobExperience } from "../models/job-experience";
                         {{ position }}
                     </div>
                 </div>
-                <div class="accomplishments">
+                <div class="description">
                     {{ jobExperience.accomplishments }}
                 </div>
-                <ul class="skills">
-                    <li class="skill" *ngFor="let skill of jobExperience.skills;">
+                <ul class="technologies">
+                    <li class="technology" *ngFor="let skill of jobExperience.skills;">
                         {{ skill }}
                     </li>
                 </ul>
