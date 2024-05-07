@@ -140,12 +140,12 @@ export class DataConstants {
         {
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/in/kevinchristopherlane/',
-            icon: '../assets/linkedin.png'
+            icon: 'assets/linkedin.png'
         },
         {
             name: 'GitHub',
             url: 'https://github.com/Kevinclane',
-            icon: '../assets/github.png'
+            icon: 'assets/github.png'
         }
     ];
 
@@ -157,7 +157,7 @@ export class DataConstants {
                 Users can also generate and download invoices. I actively used this while doing
                 freelance work.
             `,
-            image: '../assets/timetrackers.png',
+            image: 'assets/timetrackers.png',
             liveLink: 'https://www.timetrackers.net/#/',
             githubLink: 'https://github.com/Kevinclane/timeclock',
             technologies: [
@@ -175,7 +175,7 @@ export class DataConstants {
                 Web application that allows users to play Texas Hold em' against other users.
                 The game was built for a one week long hackathon. 
             `,
-            image: '../assets/texasholdem.png',
+            image: 'assets/texasholdem.png',
             githubLink: 'https://github.com/Kevinclane/HackathonPoker',
             technologies: [
                 'Vue.js',
