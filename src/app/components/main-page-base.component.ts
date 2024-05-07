@@ -47,6 +47,7 @@ export class MainPageBase {
         this._projectsTop = projectsDomRect.top;
         this._projectsBottom = projectsDomRect.height + this._experienceBottom;
 
+        // this.calculateActiveSection();
         setTimeout(() => { this.calculateActiveSection }, 100);
     }
 
@@ -57,7 +58,7 @@ export class MainPageBase {
             this.activeSection = 'about';
         } else if (screenFocusLine > this._experienceTop && screenFocusLine <= this._experienceBottom) {
             this.activeSection = 'experience';
-        } else {
+        } else if (screenFocusLine > this._projectsTop && window.scrollY <= this._projectsBottom) {
             this.activeSection = 'projects';
         }
     }
