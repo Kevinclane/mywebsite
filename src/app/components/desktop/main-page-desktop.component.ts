@@ -14,6 +14,7 @@ import { MainPageBase } from "../main-page-base.component";
           <div class="name">Kevin Lane</div>
           <div class="title">Software Engineer</div>
         </div>
+        <img src="assets/k.jpg" alt="image not found">
         <div class="nav-locations">
           <div class="nav-location" (click)="scrollTo(about)" [ngClass]="{'active': activeSection === 'about'}">About</div>
           <div class="nav-location" (click)="scrollTo(experience)" [ngClass]="{'active': activeSection === 'experience'}">Experience</div>
