@@ -47,7 +47,6 @@ export class MainPageBase {
         this._projectsTop = projectsDomRect.top;
         this._projectsBottom = projectsDomRect.height + this._experienceBottom;
 
-        // this.calculateActiveSection();
         setTimeout(() => { this.calculateActiveSection }, 100);
     }
 
