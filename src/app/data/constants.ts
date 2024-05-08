@@ -101,7 +101,7 @@ export class DataConstants {
             position: 'Software Developer',
             previousPositions: [],
             startDate: 'Oct 2020',
-            endDate: 'July 2020',
+            endDate: 'July 2023',
             skills: [
                 '.NET',
                 'C#',
