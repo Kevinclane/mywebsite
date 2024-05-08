@@ -34,7 +34,7 @@ ${n.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                 continous deployment via CI/CD pipelines. Created Splunk dashboards to monitor
                 the health of the application and debug issues in live environments. Updated a 
                 MySQL database, allowing the client to build robust reports and track inventory.
-            `},{companyName:"Mesh Software | Contract",secondName:"Flatout MotorSports",position:"Software Developer",previousPositions:[],startDate:"Oct 2020",endDate:"July 2020",skills:[".NET","C#","Angular 1","Scss"],url:"https://www.flatoutmotorcycles.com/",accomplishments:`
+            `},{companyName:"Mesh Software | Contract",secondName:"Flatout MotorSports",position:"Software Developer",previousPositions:[],startDate:"Oct 2020",endDate:"July 2023",skills:[".NET","C#","Angular 1","Scss"],url:"https://www.flatoutmotorcycles.com/",accomplishments:`
                 Build and deployed a secure web API for the client's database, separating the
                 administrators from the customers. Updated MySQL tables and columns to provide
                 additional data to users. Built modals and forms for the front-end to allow
