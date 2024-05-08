@@ -2,7 +2,7 @@ import { JobExperience } from "../models/job-experience";
 import { ProjectDetails } from "../models/project";
 
 export class DataConstants {
-    public DataConstants() {
+    constructor() {
 
     }
 
@@ -16,8 +16,8 @@ export class DataConstants {
 
     public ABOUT_TWO = `
         A couple of my favorite personal projects are the TimeTrackers and Texas Hold 'em applications.
-        Timetrackers was developed over 2 years and provided plenty of challenges to grow my 
-        abilities. Texas Hold em' was an ambitious hackathon project that required any card 
+        TimeTrackers was developed over 2 years and provided plenty of challenges to grow my 
+        abilities. Texas Hold 'em was an ambitious hackathon project that required a card 
         game to be built in one week. As if the more complex game choice wasn't enough of a 
         challenge, the project was intended for two people and I was building it myself.
     `;
@@ -47,23 +47,23 @@ export class DataConstants {
                 'Azure Container Instance',
                 'CI/CD',
                 'Angular',
-                'Typescript',
+                'TypeScript',
                 'Java',
-                'Springboot',
+                'Spring Boot',
                 'Maven',
-                'MSSql',
-                'MySql',
+                'MSSQL',
+                'MySQL',
                 'Draw.io',
                 'Figma',
                 'Scss'
             ],
             url: 'https://www.allata.com/',
             accomplishments: `
-                Architected and developed system to manage and track the progress batched 
+                Architected and developed a system to manage and track the progress of batched 
                 data through multiple Azure Services. The system also provided a way to 
                 collect and store errors and logs for the batched data. Extracted and 
                 refactored the download processes into one generic and highly extensible
-                microservice. Integreated Web Sockets for real-time updates on the front-end.
+                microservice. Integrated Web Sockets for real-time updates on the front-end.
                 Built various SPA pages from Figma designs. All of the code included extensive
                 unit testing. Wrote documentation and diagrams for complicated data flows and 
                 system architecture. 
@@ -78,19 +78,19 @@ export class DataConstants {
             skills: [
                 'CI/CD',
                 'Angular',
-                'Typescript',
+                'TypeScript',
                 'Java',
-                'Springboot',
+                'Spring Boot',
                 'Gradle',
-                'MySql',
+                'MySQL',
                 'PHP',
                 'GoLang',
                 'Scss'
             ],
             url: 'https://www.intimetec.com/',
             accomplishments: `
-                Built and deployed secure web API for the client's database. Incorporated
-                continous deployment via CI/CD pipelines. Created Splunk dashboards to monitor
+                Built and deployed a secure web API for the client's database. Incorporated
+                continuous deployment via CI/CD pipelines. Created Splunk dashboards to monitor
                 the health of the application and debug issues in live environments. Updated a 
                 MySQL database, allowing the client to build robust reports and track inventory.
             `
@@ -110,7 +110,7 @@ export class DataConstants {
             ],
             url: 'https://www.flatoutmotorcycles.com/',
             accomplishments: `
-                Build and deployed a secure web API for the client's database, separating the
+                Built and deployed a secure web API for the client's database, separating the
                 administrators from the customers. Updated MySQL tables and columns to provide
                 additional data to users. Built modals and forms for the front-end to allow
                 company employees to update and add data to the database. Increased the speed, 
@@ -163,7 +163,7 @@ export class DataConstants {
             technologies: [
                 'Vue.js',
                 'Node.js',
-                'MondoDB',
+                'MongoDB',
                 'Docx.js',
                 'Moment.js',
                 'Bootstrap',
@@ -172,8 +172,8 @@ export class DataConstants {
         }, {
             title: 'Texas Hold em',
             description: `
-                Web application that allows users to play Texas Hold em' against other users.
-                The game was built for a one week long hackathon. 
+                Web application that allows users to play Texas Hold 'em against other users.
+                The game was built for a one-week-long hackathon. 
             `,
             image: 'assets/texasholdem.png',
             githubLink: 'https://github.com/Kevinclane/HackathonPoker',
