@@ -24,8 +24,8 @@ ${n.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
                 Architected and developed system to manage and track the progress batched 
                 data through multiple Azure Services. The system also provided a way to 
                 collect and store errors and logs for the batched data. Extracted and 
-                recatored the download processes into one generic and highly extensible
-                microservice. Inegreated Web Sockets for real-time updates on the front-end.
+                refactored the download processes into one generic and highly extensible
+                microservice. Integreated Web Sockets for real-time updates on the front-end.
                 Built various SPA pages from Figma designs. All of the code included extensive
                 unit testing. Wrote documentation and diagrams for complicated data flows and 
                 system architecture. 
