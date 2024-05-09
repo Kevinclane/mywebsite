@@ -13,7 +13,7 @@ import * as FileSaver from 'file-saver';
 })
 export class Resume {
     download() {
-        const docUrl = 'https://kevinclane.github.io/mywebsite/assets/KevinLane.docx';
+        const docUrl = 'https://kevinclane.github.io/assets/KevinLane.docx';
         FileSaver.saveAs(docUrl, 'KevinLane.docx');
     }
 }
