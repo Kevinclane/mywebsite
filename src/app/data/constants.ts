@@ -173,7 +173,7 @@ export class DataConstants {
             title: 'Texas Hold em',
             description: `
                 Web application that allows users to play Texas Hold 'em against other users.
-                The game was built for a one-week-long hackathon. 
+                The game was built in one week during a hackathon event. 
             `,
             image: 'assets/texasholdem.png',
             githubLink: 'https://github.com/Kevinclane/HackathonPoker',
