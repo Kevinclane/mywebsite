@@ -29,9 +29,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deployment steps
 
-1. Push changes to gh-pages branch
+1. Checkout gh-pages and merge main
 2. Run ng build --output-path docs --base-href /mywebsite/
-3. Go into docs/browser/index.html and edit base tag's href to /mywebsite/ (It tried to load from C://....)
-4. Copy all contents in browser
-5. Paste files into docs
-6. Commit and Push
+3. Go into docs/browser/index.html and edit base tag's href to /mywebsite/ (It tries to load from C drive by default even with base href declared)
+4. Copy all contents in browser folder
+5. Paste files into docs folder (parent to browser)
+6. Commit and Push - Github Actions should handle the deployment
