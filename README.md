@@ -34,7 +34,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. Go into docs/browser/index.html and edit base tag's href to "/" (It tries to load from C drive by default even with base href declared)
 4. Copy all contents in browser folder
 5. Paste files into docs folder (parent to browser)
+* (Optional) create CNAME file in docs directory - set to live domain abc.com
 6. Commit and Push
-7. Go into repository settings and change custom domain to live domain
+7. Go into repository settings and change custom domain to live domain if no cname added
 - It may take a few minutes for the DNS host to update changes.
 - Enable development mode to speed up the process.
