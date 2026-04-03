@@ -2,34 +2,52 @@ import { JobExperience } from "../models/job-experience";
 import { ProjectDetails } from "../models/project";
 
 export class DataConstants {
-    constructor() {
-
-    }
-
     public ABOUT_ONE = `
-        In June of 2020, I enrolled in a local coding bootcamp. The course was challenging
-        and thorough, but also very enjoyable. I took what I had learned and began a freelance
-        business and worked on personal projects. I have since worked for a couple of consulting
-        firms and have gained experience in a variety of technologies. I am always looking for
-        new and exciting challenges to grow my skills and knowledge.
+        I started my career in 2020 after completing a coding bootcamp. I quickly moved from
+        freelancing to consulting, delivering full-stack solutions across multiple tech stacks.
+        I enjoy taking on challenging projects and building systems that scale.
     `;
 
     public ABOUT_TWO = `
-        A couple of my favorite personal projects are the TimeTrackers and Texas Hold 'em applications.
-        TimeTrackers was developed over 2 years and provided plenty of challenges to grow my 
-        abilities. Texas Hold 'em was an ambitious hackathon project that required a card 
-        game to be built in one week. As if the more complex game choice wasn't enough of a 
-        challenge, the project was intended for two people and I was building it myself.
+        My favorite personal projects include TimeTrackers and Texas Hold 'em. TimeTrackers is a
+        two-year initiative with a complete invoicing workflow. Texas Hold 'em is a one-week
+        hackathon build (solo) with real-time multiplayer logic.
     `;
 
     public ABOUT_THREE = `
-        Outside of web development, I enjoy going for a run/hike, playing video games, snowboarding,
-        longboarding, repairing cars, and making candy for my family during the holidays. I also 
-        dabble in game development.
+        Away from code, I run/hike, snowboard, longboard, repair cars, and make candy for the holidays.
+        I also explore game development as a creative outlet.
     `;
 
 
     public JOB_EXPERIENCES: JobExperience[] = [
+        {
+            companyName: 'Pacific Crest Services',
+            position: 'Full Stack Developer',
+            previousPositions: [],
+            startDate: 'Aug 2025',
+            endDate: 'Present',
+            skills: [
+                '.NET Core',
+                'C#',
+                'EFCore',
+                'MSSQL',
+                'Angular',
+                'TypeScript',
+                'Data Encryption',
+                'Web Sockets',
+                'Azure Blob Storage',
+            ],
+            url: 'https://pacificcrestservices.com/',
+            accomplishments: `
+                Built nearly 100% of the API server (200+ endpoints) with auth/role guards and PII data encryption.
+                Implemented encrypted search over 2M+ indexed rows with ~1s live query performance.
+                Created a composite mass-update endpoint for the largest data tree (CUD operations).
+                Developed reporting pipeline + front-end: joined data views, filter/sort/column-selection, sub-report trees, graph visualization, and XLSX export.
+                Added file upload workflow: CloudMersive virus scan + Azure Blob Storage attachment to clients.
+                Adopted AI-assisted development to boost productivity and code quality.
+            `
+        },
         {
             companyName: 'Allata LLC',
             position: 'Senior Consultant',

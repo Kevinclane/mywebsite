@@ -15,32 +15,33 @@ import { ProjectMobile } from "./project-mobile.component";
                     <div class="nav-location" (click)="scrollTo(experience)" [ngClass]="{'active': activeSection === 'experience'}">Experience</div>
                     <div class="nav-location" (click)="scrollTo(projects)" [ngClass]="{'active': activeSection === 'projects'}">Projects</div>
                 </div>
-                <!-- <app-resume /> -->
-                <!-- <app-links /> -->
             </div>
-            <div class="name-section">
-                <div class="name">Kevin Lane</div>
-                <div class="title">Software Engineer</div>
-            </div>
-            <div class="content-section">
-                <div class="about" #about>
-                    <div>{{ dataConstants.ABOUT_ONE }}</div>
-                    <div>{{ dataConstants.ABOUT_TWO }}</div>
-                    <div>{{ dataConstants.ABOUT_THREE }}</div>
+            <div class="container-content">
+                <div class="name-section">
+                    <div class="name">Kevin Lane</div>
+                    <div class="title">Software Engineer</div>
                 </div>
-            <div class="experience" #experience>
-                <div *ngFor="let job of dataConstants.JOB_EXPERIENCES;">
-                    <app-experience-mobile [jobExperience]="job"/>
+                <div class="content-section">
+                    <div class="about" #about>
+                        <div>{{ dataConstants.ABOUT_ONE }}</div>
+                        <div>{{ dataConstants.ABOUT_TWO }}</div>
+                        <div>{{ dataConstants.ABOUT_THREE }}</div>
+                    </div>
                 </div>
-            </div>
-            <div class="projects" #projects>
-                <div *ngFor="let project of dataConstants.PROJECTS">
-                    <app-project-mobile [project]="project" />
+                <div class="experience" #experience>
+                    <div *ngFor="let job of dataConstants.JOB_EXPERIENCES;">
+                        <app-experience-mobile [jobExperience]="job"/>
+                    </div>
                 </div>
+                <div class="projects" #projects>
+                    <div *ngFor="let project of dataConstants.PROJECTS">
+                        <app-project-mobile [project]="project" />
+                    </div>
+                </div>
+            </div> 
+            <div class="footer">
+                <app-links />
             </div>
-        </div>
-        <div class="footer">
-            <app-links />
         </div>
     `,
     selector: 'app-main-page-mobile',
