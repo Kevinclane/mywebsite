@@ -5,14 +5,14 @@
     flex-direction: row;
 
     .nav-section {
-        width: 30dvw;
+        width: 20dvw;
         height: 100dvh;
         display: flex;
         justify-content: start;
         align-items: center;
         flex-direction: column;
-        background-color: $dark-cyan;
-        background: linear-gradient(90deg, $dark-cyan 0%, $primary-dark 100%);
+        background-color: $darker-cyan;
+        // background: linear-gradient(90deg, $dark-cyan 0%, $primary-dark 100%);
         text-align: center;
         color: $near-white;
         position: sticky;

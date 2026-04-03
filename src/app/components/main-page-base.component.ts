@@ -21,12 +21,12 @@ export class MainPageBase {
         this.setupScrollData();
     }
 
-    @HostListener('window:resize', ['$event'])
+    @HostListener('window:resize')
     public onResize() {
         this.setupScrollData();
     }
 
-    @HostListener('document:scroll', ['$event'])
+    @HostListener('document:scroll')
     public onViewportScroll() {
         this.calculateActiveSection();
     }
@@ -47,7 +47,7 @@ export class MainPageBase {
         this._projectsTop = projectsDomRect.top;
         this._projectsBottom = projectsDomRect.height + this._experienceBottom;
 
-        setTimeout(() => { this.calculateActiveSection }, 100);
+        setTimeout(() => { this.calculateActiveSection(); }, 100);
     }
 
     private calculateActiveSection() {

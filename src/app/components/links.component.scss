@@ -1,4 +1,35 @@
+@import '../../styles.scss';
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    gap: 1rem;
+
+}
+
 a img {
     width: 20px;
     padding: .25rem;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $green;
+        width: 30px;
+        transition: 0.3s;
+        -o-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -webkit-transition: 0.3s;
+    }
+
+}
+
+:not(:hover) {
+    transition: 0.3s;
+    -ms-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
 }

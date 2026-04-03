@@ -15,7 +15,7 @@ import { MainPageBase } from "../main-page-base.component";
           <div class="title">Software Engineer</div>
         </div>
         <div class="nav-locations">
-          <div class="nav-location" (click)="scrollTo(about)" [ngClass]="{'active': activeSection === 'about'}">About</div>
+          <div class="nav-location" (click)="scrollTo(about)" [ngClass]="{'active': activeSection === 'about' || !activeSection}">About</div>
           <div class="nav-location" (click)="scrollTo(experience)" [ngClass]="{'active': activeSection === 'experience'}">Experience</div>
           <div class="nav-location" (click)="scrollTo(projects)" [ngClass]="{'active': activeSection === 'projects'}">Projects</div>
         </div>

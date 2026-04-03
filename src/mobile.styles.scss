@@ -10,6 +10,7 @@
     .secondary-title {
         font-size: 1.2rem;
         font-weight: bold;
+        color: $gray;
     }
 
     .description {
@@ -26,15 +27,9 @@
             margin: 0.25rem 0.5rem 0.25rem 0;
             border-radius: 2rem;
             background-color: $green;
-            color: $primary-dark;
             font-size: .75rem;
             color: $light-green;
         }
-    }
-
-    .links a img {
-        width: 20px;
-        padding: .25rem;
     }
 
 }
