@@ -17,7 +17,7 @@ ${n.map((r,o)=>`${o+1}) ${r.toString()}`).join(`
         I also explore game development as a creative outlet.
     `,this.JOB_EXPERIENCES=[{companyName:"Pacific Crest Services",position:"Full Stack Developer",previousPositions:[],startDate:"Aug 2025",endDate:"Present",skills:[".NET Core","C#","EFCore","MSSQL","Angular","TypeScript","Data Encryption","Web Sockets","Azure Blob Storage"],url:"https://pacificcrestservices.com/",accomplishments:`
                 Built nearly 100% of the API server (200+ endpoints) with auth/role guards and PII data encryption.
-                Implemented encrypted search over 2M+ indexed rows with ~1s live query performance.
+                Implemented encrypted data search on millions of records while maintaining ~1s live query performance time.
                 Created a composite mass-update endpoint for the largest data tree (CUD operations).
                 Developed reporting pipeline + front-end: joined data views, filter/sort/column-selection, sub-report trees, graph visualization, and XLSX export.
                 Added file upload workflow: CloudMersive virus scan + Azure Blob Storage attachment to clients.
